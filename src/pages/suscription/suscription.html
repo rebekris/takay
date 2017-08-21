@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar>
+    
+    <ion-title>
+      Suscription
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page4">
+  <ion-list id="suscription-list11">
+
+    
+
+
+    <ion-item color="none" on-click="goToPlan()" id="suscription-list-item32">
+          
+          <h4 class="title">Plan</h4>
+          
+          <ion-note item-center *ngIf="is_selected_plan=='1'">
+            <span>{{plan.translation.en.name}} - ${{plan.priceBlend}} per blend - ${{plan.priceDelivery}} per delivery</span>
+          </ion-note>
+          <ion-note *ngIf="is_selected_plan=='0'">  Select your plan</ion-note>
+
+           <div class="state_bullet">
+              <div *ngIf="is_selected_plan =='0'" class="state uncheck"></div>
+              <div  *ngIf="is_selected_plan =='1'" class="state check"></div>
+          </div>
+
+    </ion-item>
+
+
+    <ion-item color="none" on-click="goToDelivery()" id="suscription-list-item33">
+          
+          <h4 class="title">Delivery</h4>
+
+          <ion-note item-center *ngIf="is_selected_delivery=='1'">
+            <span>You selected: {{delivery.day}} - {{delivery.hour}} at {{delivery.address}}</span>
+          </ion-note>
+          
+          <ion-note *ngIf="is_selected_delivery=='0'">  Select your delivery</ion-note>
+
+          <div class="state_bullet">
+              <div *ngIf="is_selected_delivery =='0'" class="state uncheck"></div>
+              <div  *ngIf="is_selected_delivery =='1'" class="state check"></div>
+          </div>
+
+    </ion-item>
+
+
+    <ion-item color="none" id="suscription-list-item34" on-click="goToFlavor()">
+          
+          <h4 class="title">Flavors</h4>
+
+          <ion-note *ngIf="is_selected_flavor=='1'">
+          <ul class="flavors">
+            <li *ngFor='let f of flavors'><span> {{f.name}}({{f.quantity}}) </span></li>
+          </ul>
+          </ion-note>          
+          <ion-note *ngIf="is_selected_flavor=='0'">  Select your flavors</ion-note>
+          <div class="state_bullet">
+            <div *ngIf="is_selected_flavor =='0'" class="state uncheck"></div>
+            <div *ngIf="is_selected_flavor =='1'" class="state check"></div>
+          </div>
+          
+          <!-- <div class="state_bullet">
+              <div class="state uncheck"></div>
+          </div> -->
+    
+    </ion-item>
+
+
+  </ion-list>
+  <button id="suscription-button17" ion-button color="positive" block class="button-clear" on-click="goToOrder()">
+    Next
+  </button>
+  <button id="suscription-button18" ion-button color="positive" block class="button-clear" small on-click="cancelPlan()">
+    Cancel
+  </button>
+  
+</ion-content>

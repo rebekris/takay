@@ -1,0 +1,39 @@
+page-delivery {
+	.hidden{
+		display: none;
+	}
+	.visible{
+		display: block;
+	}
+	.day{
+		//position: relative;
+		
+		display: block;
+		clear: both;
+		padding-bottom: 15px;
+		overflow: hidden;
+		h4, .state_bullet{
+			display: inline-block;
+			margin: 0;
+			
+		}
+		h4{
+			float:left;
+			
+			
+		}
+		.state_bullet{
+			float: right;
+			background-image: none;
+			
+		}
+
+	}
+	#address{
+		background: white;
+		text-transform: capitalize;
+		vertical-align: middle;
+		border: 1px solid black;
+	}
+
+}

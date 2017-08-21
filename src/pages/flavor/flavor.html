@@ -1,0 +1,64 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Flavors</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<div class="padding">
+
+	<div class="divider">
+		<h3>Select your Flavors</h3>
+	</div>
+	<ion-grid class="flavor_list">
+		<ion-row class="ings" *ngFor='let item of menulist'>
+
+
+
+			<ion-col col-3>
+				<ion-avatar item-start>
+					<img [src]="item.photo|mediaPath" height="80" width="80" />
+				</ion-avatar>
+			</ion-col>
+			<ion-col col-9>
+				<h4 class="title">{{ item.translation.en.title }}</h4>
+				<ul class="ingredients">
+					<li *ngFor="let ing of item.ingredients">{{ ing.Translation.en.name }} </li>
+				</ul>
+				<ion-note *ngIf="qty_total_store!='0'"> 
+					<div class="botonera">
+						<div class="btn" (tap)="remove($event, item)">-</div>
+						<input type="text" value="0" readonly  min="0" [id]=item.id [name]=item.translation.en.title >
+						<!-- <div *ngFor="let mf of memory_flavor">
+						
+							<ng-template *ngIf="mf.id == item.id">
+								<input type="text" [value]="getQuantity(mf, item)" readonly  min="0" [id]=item.id [name]=item.translation.en.title >							
+							</ng-template>
+						</div> -->
+						<div class="btn"(tap)="add($event, item)">+</div>
+						
+					</div>
+				</ion-note>
+				
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-note *ngIf="qty_total_store!='0'"> 
+		<ion-row>
+		
+			<p style="text-align: center">Please select <span>{{qty_total_store}}</span> blends. <span>{{qty}}</span> remaining</p>
+			<ion-col class="signup-col">
+			   <button ion-button class="submit-btn" small type="submit" on-click="saveData()">Save</button>
+				  
+			</ion-col>
+		</ion-row>
+	 
+	</ion-note>
+	
+</div>
+
+</ion-content>

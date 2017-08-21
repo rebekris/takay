@@ -1,0 +1,81 @@
+<ion-content id="page2">
+  <!-- <img src="assets/img/takay1.png" alt="" width="100%"> -->
+  <div showWhen="ios" class="space">
+   
+  </div>
+  <iframe width="100%" height="215" [src]="videoUrl|youtube" frameborder="0" allowfullscreen></iframe>
+  <div class="content padding">
+   <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <h2>No Waste + No Mess</h2>
+  <p style="text-align: center">Get whole-food meal replacement smoothies delivered to your door, frozen and ready to blend.</p>
+  <div class="clearfix">
+    
+    <button class="button-clear" small on-click="goToSuscription()" ion-button color="dark">
+      Start now
+    </button>
+  </div>
+  <h3>How it works</h3>
+  <h4 class="number">
+    <span>1</span>
+  </h4>
+  <h2>Select your blends</h2>
+  <div class="clearfix">
+    <img src="assets/img/blend.jpg" alt="">
+  </div>
+    
+  <p>
+    Choose any combination of delicious blends developed by a nutritionist and made tasty by a chef.
+  </p>
+  
+  <h4 class="number">
+    <span>2</span>
+  </h4>
+  <h2>Get your box</h2>
+  <div class="clearfix">
+    <img src="assets/img/box.jpg" alt="">   
+  </div>
+  <p>
+    Your pre-portioned superfood smoothies will arrive ready to store in your freezer + blend when ever you like!
+  </p>
+
+  <h4 class="number">
+    <span>3</span>
+  </h4>
+  <h2>Enjoy</h2>
+  <div class="clearfix">
+    <img src="assets/img/enjoy.jpg" alt="">
+  </div>
+  <p>
+    Just add your favorite choice of milk to your smoothie and blend. No waste, no mess.
+  </p>
+
+  <h3>Blog</h3>
+
+  <ion-card class="news" *ngFor='let item of newsData'  on-click="goToNew(item)">
+    <ion-item>
+      <p class="date">{{item.image.created_at}}</p>
+    </ion-item>
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-5 class="thumbnail">
+          <img [src]="item.image|mediaPath" height="110" />
+            
+            
+        </ion-col>
+        <ion-col col-7 class="text">
+          <h2> {{ item.translation.en.title }}</h2>
+          <p> {{ item.shortDesc }}</p>
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>
+  
+
+
+  </div>
+    
+  
+</ion-content>

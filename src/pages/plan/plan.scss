@@ -1,0 +1,33 @@
+page-plan {
+	
+	ion-label{
+		margin: 0 0 10px 0 !important;
+		padding-top: 25px !important;
+		text-align: center !important;
+	}
+	ion-list{
+		.list-ios > .item-block:first-child, .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block{
+			border-top: none !important;
+			border-bottom: none !important;
+		}
+
+	
+		.item-inner{
+			padding-bottom: 20px;
+		}
+		.input-wrapper {
+		    width: 100%;
+		    position: relative;
+		    display: block;
+		}
+		.item-md .radio-md {
+		    position: fixed;
+		    display: block;
+		    /* margin: 9px 10px 9px 0; */
+		    width: 100%;
+		    left: 50%;
+		    bottom: 0;
+		}
+	}
+
+}

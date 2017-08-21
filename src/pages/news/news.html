@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ post.translation.en.title }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page10">
+<ion-card>
+   <img [src]="post.image|mediaPath"/>
+  <ion-card-content>
+    <ion-card-title>
+      <h1>{{ post.shortDesce }}</h1>
+      </ion-card-title>
+    <div [innerHTML]="post.translation.en.description|markdown"></div>
+  </ion-card-content>
+</ion-card>
+  
+
+</ion-content>

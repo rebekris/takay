@@ -1,0 +1,54 @@
+page-t-akay {
+	@extend %no-scroll;
+	// botones
+	.buttons{
+		display: block;
+		width: 75%;
+		margin: 35px auto;
+		background: url(../assets/img/line.png) no-repeat center center;
+		min-height: 65px;
+		position: relative;
+		padding-top: 12px;
+		#left{
+			//border-right: 1px solid white;
+			left: 0;
+		}
+		#right{
+			right: 0;
+		}
+		.btn-container{
+			//background: red;
+			display: inline-block;
+			width: 40%;
+			text-align: left;
+			position: absolute;
+			button.btn-login, span{color: white; background: none;}
+			button.btn-login{
+				width: 100%;
+				padding-left: 0;
+				margin-left: 0;
+				margin-bottom: 0;
+				.button-inner{
+					justify-content: initial;
+					text-align: left; 
+					p{
+						text-transform: capitalize;
+						font-size: 12px !important;
+						color: white !important;
+						line-height: 17px;
+						&:first-line{
+						font-size: 16px;
+						font-weight: 500;
+						}
+					}
+				}				
+			}
+		}
+	}
+	#page5{
+		background: black url(../assets/img/bg_style.png) no-repeat center 92%;
+
+		
+	}
+	
+}

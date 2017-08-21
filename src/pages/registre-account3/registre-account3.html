@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Payment Method
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page8" style="background-color:#FFFFFF;">
+  <form id="registreAccount3-form3">
+    
+    <h3 id="registreAccount3-heading4" style="color:#000000;text-align:center;">
+      Register Account Payout
+    </h3>
+    <div class="spacer" style="width:300px;height:36px;" id="registreAccount3-spacer6"></div>
+    <ion-list id="registreAccount3-list3">
+      <ion-item id="registreAccount3-input14">
+        <ion-label></ion-label>
+        <ion-input type="text" placeholder="Card Holder Name" name="user" id="user" [value]=user.name></ion-input>
+      </ion-item>
+      <ion-item id="registreAccount3-input13">
+        <ion-label></ion-label>
+        <ion-input type="text" placeholder="Card Number" name="card-number" id="card-element"></ion-input>
+      </ion-item>
+    
+    </ion-list>
+    
+    <button id="registreAccount3-button16" ion-button color="dark" class="button-clear" style="font-size:20px;" on-click="pay()">
+      Pay
+    </button>
+  </form>
+</ion-content>  

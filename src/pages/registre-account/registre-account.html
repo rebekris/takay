@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    
+    <ion-title>
+      Register Account
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page6" style="background-color:#FFFFFF;">
+<h2> Profile Information </h2>
+
+<ion-list class="selects">
+  <ion-item>
+    <button ion-button clear full (click)="doCountry()" id="country" icon-right>Select country  <ion-icon name="arrow-down"></ion-icon></button>
+  </ion-item>
+  <ion-item>
+    <button ion-button clear full (click)="doCity()" id="city" icon-right>Select city  <ion-icon name="arrow-down"></ion-icon></button>
+  </ion-item>
+</ion-list>
+  
+
+
+  <form (ngSubmit)="signUp()" #registerForm="ngForm">
+    
+ 
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" name="name" [(ngModel)]="reg.name" required autofocus></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input type="text" name="last_name" [(ngModel)]="reg.last_name" required ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="reg.email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password <span>(minimum 6 characters)</span></ion-label>
+        <ion-input type="password" name="passw" [(ngModel)]="reg.passw" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Confirm your Password</ion-label>
+        <ion-input type="password" name="passw" [(ngModel)]="reg.confirm_pass" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Got a coupon?</ion-label>
+        <ion-input name="coupon" [(ngModel)]="reg.coupon"></ion-input>
+      </ion-item>
+      
+    
+
+      
+    </ion-list>
+    <button class="button-clear" small type="submit" ion-button color="dark" [disabled]="!registerForm.form.valid">
+      Next Step
+    </button>
+  </form>
+</ion-content>

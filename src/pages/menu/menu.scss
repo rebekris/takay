@@ -1,0 +1,47 @@
+page-menu {
+	h6{
+		text-align: left;
+		margin-top: 0;
+		line-height: 16px;
+		padding-left: 15px;
+		small{font-weight: 100;}
+	}
+	.padding-menu{
+		padding: 0 10px;
+	}
+	.menu-list{
+		[col-6]{
+			padding: 0;
+			margin-bottom: 10px;
+		}
+	}
+
+	ion-row{
+		ion-col{
+			min-height: 190px !important;
+			&:hover{
+				background: #f1f1f1;
+				border: 0
+			}
+
+			
+		}
+		.item{
+			margin: 5px 5px 0;
+			padding-top: 10px;
+			border: 0.2rem solid gray;
+			contain: initial;
+			height: 100%;
+			position: relative;
+			//h6{margin-top:0 }
+			.photo{
+				position: absolute;
+				bottom: 5px;
+				width: 100%;
+
+			}
+		}
+		
+	}
+	
+}

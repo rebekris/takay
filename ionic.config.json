@@ -1,0 +1,13 @@
+{
+  "name": "TAKAY",
+  "app_id": "a146c996",
+  "v2": true,
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/",
+      "proxyUrl": "http://takay.h4o-studio.com"
+    }
+  ],
+  "type": "ionic-angular"
+}

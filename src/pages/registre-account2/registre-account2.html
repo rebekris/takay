@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    
+    <ion-title>
+      Register Account
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page7" style="background-color:#FFFFFF;">
+  <form (ngSubmit)="signUp()" #register2Form="ngForm">
+    
+    <h2>
+      Delivery Address
+    </h2>
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Address</ion-label>
+        <ion-input type="text" name="address"  [(ngModel)]="address.address" autofocus></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Zip Code</ion-label>
+        <ion-input type="text" name="address" [(ngModel)]="address.zip_code"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Mobile Number</ion-label>
+        <ion-input type="tel" name="phone" [(ngModel)]="address.phone"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <button class="button-clear" small type="submit" ion-button color="dark" [disabled]="!register2Form.form.valid">
+      Next Step
+    </button>
+    
+  </form>
+</ion-content>

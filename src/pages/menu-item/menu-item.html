@@ -1,0 +1,91 @@
+<ion-header *ngIf="menuitem">
+
+  <ion-navbar>
+    <ion-title>{{ menuitem.translation.en.title }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content *ngIf="menuitem" class="selection">
+<div class="padding">
+	<ion-card >
+
+	  <ion-card-content>
+	    <ion-card-title>
+	   		<ion-slides pager control loop autoplay="3000">
+		    	<ion-slide>
+					<img [src]="menuitem.photo|mediaPath" height="175" />
+				</ion-slide>
+				
+				<ion-slide *ngFor="let slide of menuitem.flavorDmMedia">
+					<img [src]="slide.DmMedia|mediaPath" height="175" />
+				</ion-slide>
+			</ion-slides>
+	      
+	      </ion-card-title>
+	   		
+	      <ion-grid class="body">
+		      <ion-row>
+		      	<ion-col col-6 class="benefit">
+		      		<h4>Function</h4>
+		      		<ul *ngFor ='let item of menuitem.benefits'>
+		      			<li>{{item.Translation.en.name}}</li>		      			
+		      		</ul>
+		      		
+
+		      	</ion-col>
+		      	<ion-col col-6 class="ingredients" >
+		      	<h4>Ingredients</h4>
+		      		<ul>
+		      			<li *ngFor ='let item of menuitem.ingredients'>{{item.Translation.en.name}}</li>
+		      		</ul>
+
+		      	</ion-col>
+		      </ion-row>
+	      	
+	      </ion-grid>
+	      <div [innerHTML]="menuitem.translation.en.description|markdown" class="description"></div>
+
+	      <div class="togglebox">
+		      <input id="toggle1" type="radio" name="toggle" />
+		      <label for="toggle1">Ingredients</label>
+		      <section id="content1">
+		      <ul>
+			     	<li *ngFor ='let ingredient of menuitem.ingredients'>
+			     		<article>
+			      			<strong>{{ingredient.Translation.en.name}}</strong> 
+			      			<p>{{ingredient.description}}</p>
+			     			
+			     		</article>
+			      		</li>
+			      	</ul>
+		      </section>
+
+		      <input id="toggle2" type="radio" name="toggle" />
+		      <label for="toggle2">How to Blend</label>
+		      <section id="content2">
+		      <article [innerHTML]="menuitem.translation.en.how_to_blend|markdown" class="blend">
+		        	</article> 
+		      </section>
+
+
+		      <input id="toggle3" type="radio" name="toggle" />
+		      <label for="toggle3">Nutrition Facts</label>
+		      <section id="content3">
+		      <div [innerHTML]="menuitem.translation.en.nutrition_fact|markdown" class="nutrition">
+		        	</div> 
+		      </section>
+
+		      
+		   </div>
+
+
+	 
+	      
+
+	   </ion-card-content>
+	</ion-card>
+
+</div>
+</ion-content>

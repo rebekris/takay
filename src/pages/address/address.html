@@ -1,0 +1,45 @@
+<!--
+  Generated template for the Address page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add a New Address</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="saveAddress()" #addressForm="ngForm">
+
+
+		<h5>Choose a name from new Address</h5>
+		<ion-input type="text" placeholder="Example 'Home'" name="name" [(ngModel)]="address.name" autofocus></ion-input>
+		
+		
+
+		<h5>Address</h5>
+		
+
+		<ion-input type="text" name="address" [(ngModel)]="address.address" class="hidden" required placeholder="Address"></ion-input>
+
+
+		<h5>Zip Code</h5>
+		<ion-input type="text" name="zip_code" placeholder="Zip Code" [(ngModel)]="address.zip_code" ></ion-input>
+
+
+		
+		<h5>Mobile Number</h5>
+		
+		<ion-input type="text" name="phone" [(ngModel)]="address.phone" class="hidden" required placeholder="Phone"></ion-input>
+		
+	<button ion-button class="submit-btn" small type="submit" [disabled]="!addressForm.form.valid">Save</button>
+	
+	</form>
+
+
+</ion-content>

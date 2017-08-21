@@ -1,0 +1,62 @@
+page-flavor {
+
+
+	.flavor_list{
+		h4.title{ display: block; clear: both; }
+		.ingredients{
+			text-align: justify;
+			padding: 0;
+			li {
+			    display: inline-block;
+			    &:after{
+			    	display: inline-block; 
+			    	content: " + ";
+			    	padding: 0 8px;
+			    	//height: 100%;
+			    }
+			    &:last-child{
+					&:after{display:none;}
+				}
+			} 
+		}
+
+	} 
+		//input[type=text]{ width: 30px; border: 0; text-align: center; }	
+
+	.note{ margin: 0; }
+	.incremental{
+		background: red;
+	}
+	.ings{
+		border-bottom:1px solid #f1f1f1;
+		margin-bottom: 5px;
+	}
+	.botonera{
+		display: inline-block;
+		width: auto;
+		margin:10px auto;
+
+		.btn, input{display: inline-block;}
+	}
+
+	input{
+		width: 50px;
+		height: 30px;
+		text-align: center;
+	}
+	.btn{
+		border-radius:50%;
+		width: 30px;
+    	height: 30px;
+		background:black;
+		color:white;
+		cursor:pointer;
+		vertical-align: middle;
+		font-size: 25px;
+	    line-height: 30px;
+	
+		
+	}
+
+	
+}

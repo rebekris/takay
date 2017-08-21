@@ -1,0 +1,60 @@
+<!--
+  Generated template for the Plan page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Plan</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div class="divider">
+		<h3>Select your <br> plan</h3>
+	</div>
+
+	<ion-list >
+	  <ion-item *ngFor='let p of plans' >	  	
+
+	    <div on-click="savePlan($event,p)">
+	    <h4 class="title">{{ p.translation.en.name }}</h4>
+		    <p item-center>
+			    Price per delivery: ${{ p.priceDelivery }}
+			    <br>
+			    Price per blend: ${{ p.priceBlend}}
+		    </p>
+
+
+		    <div class="state_bullet">
+			    <div *ngIf="id_selected != p.id" class="state uncheck" [id]=p.id></div>
+	            <div  *ngIf="id_selected == p.id" class="state check" [id]=p.id></div>
+
+		    	
+	        </div>
+		
+	    	
+	    </div>
+
+	  </ion-item>
+	    
+	</ion-list>
+	<ion-row>
+		<ion-col class="signup-col">
+		  <button ion-button class="submit-btn" small type="submit" on-click="goBack()">Save</button>
+		  
+		</ion-col>
+	  </ion-row>   
+
+
+	
+
+
+
+
+</ion-content>
+

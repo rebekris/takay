@@ -1,0 +1,152 @@
+page-menu-item {
+
+	.body{
+		padding-top: 0;
+		.benefit,.ingredients {
+			padding-top: 0;
+			padding-bottom: 0;
+			h4{
+				margin-top: 0 !important;
+			}
+		}
+		.ingredients{
+			padding-left: 2.5rem;
+		}
+	}
+	
+
+	.scroll-content{
+		padding: 15px 0 !important;
+		margin-top: 50px !important;
+	}
+	.togglebox {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  transform: translateZ(0);
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+label {
+  text-align: left;
+  position: relative;
+  display: block;
+  height: 55px;
+  line-height: 50px;
+  padding: 10px 5px;
+  font-size: 14px;
+  font-weight: 500;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+label[for*='1'] {
+  border: 0;
+
+}
+
+label:after {
+  content: '\f053';
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-family: fontawesome;
+  transform: rotate(270deg);
+  transition: .3s transform;
+}
+
+section {
+  height: 0;
+  transition: .3s all;
+  overflow: hidden;
+  text-align: left !important;
+  padding: 0 5px;
+ // margin-bottom: 10px;
+  ul, p{
+  	padding-left: 0;
+
+  	 //text-align: justify;
+  }
+  li{
+  	margin-bottom: 20px;
+  }
+  
+}
+
+.swiper-container{
+	padding: 0 0 25px 0; 
+	img{
+		height: 180px;
+	}
+}
+		.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
+			bottom: 0 !important;
+		}
+
+
+#toggle1:checked ~ label[for*='1']:after,
+#toggle2:checked ~ label[for*='2']:after,
+#toggle3:checked ~ label[for*='3']:after,
+#toggle4:checked ~ label[for*='4']:after {
+  transform: rotate(0deg);
+}
+
+#toggle1:checked ~ #content1,
+#toggle2:checked ~ #content2,
+#toggle3:checked ~ #content3,
+#toggle4:checked ~ #content4 {
+  height: 100%;
+}
+
+	.selection{
+		padding: 0;
+		ion-card{
+			box-shadow: none;
+			width: 100%;
+			margin: 0;
+			ion-card-content{
+				padding:0;
+
+				ion-card-title{
+					padding: 0;
+					margin: 0;
+					//background: #f1f1f1;
+					//text-align: center;
+					img{
+						width: auto;
+						display: inline-block;
+					}
+				}
+					
+
+				.body{
+					margin: 20px 0;
+					padding: 5px 25px;
+					ion-col{text-align: left;}
+					p, ul{padding-left:0;}
+					ul{
+						margin-bottom: 0;
+						li{list-style: none;  }
+					}
+					
+				}
+				.description, .nutrition, .blend{
+					padding: 0;
+					p{text-align:left !important}
+				}
+			}
+		}
+		/*.ingredients{
+			border-left: 1px solid black;
+			padding-left: 12px;
+		}*/
+	}
+
+}

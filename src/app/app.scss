@@ -1,0 +1,330 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+body{
+
+	background: white; 
+	//font-size: 1.8rem;
+	font-size: 14px;
+
+}
+h1, h2, h3{
+	text-align: center;
+	font-family: "Avenir" !important;
+	font-weight: bold;
+}
+h3{
+	font-weight:100;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+}
+h2{
+	font-weight: bolder;
+	font-size: 1.8rem;
+}
+h4{
+	font-weight: 500 !important;
+	text-align: left;
+	font-size: 1.4rem;
+}
+h5{
+	margin-bottom: 0;
+	text-align: left;
+	line-height: 20px;
+	small{
+		font-size: 60%;
+	}
+}
+span{
+	font-size: 1.1rem;
+	text-align: center;
+}
+
+ul,li, p{font-size: 1.3rem !important; }
+
+strong{font-weight: 500;}
+
+p{
+	padding: 5px;
+	line-height: 20px;
+	color: black !important;
+	font-weight: 100;
+	
+}
+ul{
+	margin:0 !important;
+	padding-top: 5px;
+	list-style:none !important;
+
+}
+
+.padding{
+	padding: 0 25px !important;
+}
+.tabs {
+	.tab-button-icon, .icon-ios, .icon{
+		height: 25px;
+		margin-top: 5px;
+		background-size: 25px !important;
+	}
+}
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon{color:white;}
+
+//TABS ICON!
+.tabs{
+	.tab-button[aria-selected=false]{
+		.ion-md-takay, .ion-ios-takay-outline{
+			background: url(../assets/img/tabs/takay.gif) no-repeat top center;	
+		}
+		.ion-md-suscription, .ion-ios-suscription-outline{
+			background: url(../assets/img/tabs/suscription.gif) no-repeat top center;	
+		}
+		.ion-md-profile, .ion-ios-profile-outline{
+			background: url(../assets/img/tabs/profile.gif) no-repeat top center;	
+		}
+	}
+	.tab-button[aria-selected=true]{
+		.ion-md-takay, .ion-ios-takay{
+			background: url(../assets/img/tabs/takay_hover.gif) no-repeat top center;	
+		}
+		.ion-md-suscription, .ion-ios-suscription{
+			background: url(../assets/img/tabs/suscription_hover.gif) no-repeat top center;	
+		}
+		.ion-md-profile, .ion-ios-profile{
+			background: url(../assets/img/tabs/profile_hover.gif) no-repeat top center;	
+		}
+	}
+
+}
+
+.toolbar-background, .tabbar{ 
+	background: black !important;
+}
+.toolbar-title.toolbar-title-md, .tab-button, .toolbar-title-ios{
+	color: white !important;
+}
+
+.content{
+	padding: 0 25px;
+	text-align: center
+}
+
+.clearfix{
+	margin: 20px auto;
+}
+
+.tabs-md {
+	.tabbar{
+		background: black;
+		.tab-button, ion-icon{
+			color: white;
+			&:hover, &:active{
+				color: white;
+			}
+		}
+	}
+	.tab-button[aria-selected=true] .tab-button-icon{
+		color: white;
+	}
+
+}
+
+.news{
+	margin:0 0 15px 0 !important;
+	width: 100%;
+	box-shadow: none;
+	.card-content{
+		padding:0;
+		min-height: 125px;
+		h2{text-align: left; font-weight: bold;}
+		p{text-align: justify; font-size: 10px; padding:0;}
+		.thumbnail{
+			padding: 0 !important;
+		}
+	}
+	.item-block{
+		padding:0;
+		/*.label{
+			margin: 0;
+			border-bottom: 1px solid gray;
+			background: url(../assets/img/news/icon_new.png) no-repeat left center;
+			p{margin:0 0 0 35px;}
+		}*/
+	}
+}
+
+.number{
+		padding: 20px 0;
+		z-index: 0;
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+
+		//border-radius: 50%;
+		//border: 1px solid black;
+
+		&:after{
+			display: block;
+			content: " ";
+			width: 100%;
+			border-top: 1px solid black;
+			z-index: -1;
+			top: 30px;
+			position: absolute;
+		
+		}
+		span{
+			background: white;
+			padding: 7px 10px;
+			border: 1px solid black;
+			border-radius: 50%;
+			z-index: 1;
+			font-weight: bold;
+		}
+	}
+	ion-select{
+		max-width: 100%;
+		width: 100%;
+		border: 1px solid black;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.item{
+
+	}
+.select .item-inner, .list-ios[inset] .item {
+    border-bottom: 0 !important;
+}
+ion-input{
+	//border-bottom: 1px solid black;
+	margin-top: 10px;
+	//background:red
+}
+
+.back-button{
+	span.button-inner{
+		color: white;
+		span.back-button-text.back-button-text-ios{display: none}
+
+
+	}
+}
+/* ion-app.md [padding], ion-app.md [padding] .scroll-content{
+	padding: 5px 10px 10px 10px;
+} */
+
+%no-scroll{
+	.scroll-content{
+		overflow-y: hidden !important;
+	}	
+}
+
+button.add{
+	//background: rebeccapurple;
+	margin-top: -20px;
+	border-radius: 50%;
+	padding: 5px 9px;
+	ion-icon{
+		font-size: 35px;
+	}
+}
+.button-clear, .submit-btn{
+	background: #EBEBED;
+	color: black;
+	text-transform: uppercase;
+	box-shadow: none;
+	padding: 20px 35px !important;
+	height: 3.6rem;
+	span{font-size: 14px; font-weight:bolder;}
+}
+/*
+ion-list{
+		ion-item{
+	
+			//padding-left: 15px;
+			.item-inner{
+				//border-bottom: 0.55px solid #000000 !important;
+
+			}
+		}
+	}
+	form.forms{
+		padding: 5px 30px;
+}
+*/
+
+.divider{
+
+	background: url(../assets/img/bg-h3.png) center 48%  repeat-x;
+	text-align: center;
+	h3{ 
+		display: inline-block; 
+		background: white; 
+		padding: 10px 20px; 
+		margin: 0; 
+	}
+		
+}
+
+h4.title{ 
+	font-weight: bolder !important; 
+	font-size: 20px;
+	
+}
+.center{ text-align: center !important; }
+
+.state_bullet{
+	background: url(../assets/img/divider_line.jpg) 0 15px repeat-x;
+	margin-top: 20px;
+	display: block;
+
+	.state{
+		width: 30px;
+		height: 30px;
+		background: black;
+		display: inline-block;
+		border-radius: 15px;
+	}
+
+	.check{
+		background: black url(../assets/img/icon_check.png) center no-repeat;
+	}
+	.uncheck{
+		background: white;
+		border: 1px solid black;
+	}	
+
+}
+.list-ios, .list-md{
+	.item-block .item-inner, & > .item-block:last-child, & > .item-wrapper:last-child .item-block{
+		border-bottom: 0;		
+	
+	}
+}
+ion-note{
+	span{
+		color:black;
+	}
+}
+
+ion-label{
+		    white-space: normal !important;
+	}
+.swiper-pagination-bullet-active{
+	background: black;
+}

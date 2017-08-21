@@ -1,0 +1,27 @@
+// Avenir Font
+// Google
+// Apache License, version 2.0
+// http://www.apache.org/licenses/LICENSE-2.0.html
+
+$avenir-font-path: $font-path !default;
+
+@font-face {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Avenir LT 35 Light Regular"), local("avenir-lt"), 
+  url("#{$avenir-font-path}/avenir-lt.ttf") format("truetype"), 
+  url("#{$roboto-font-path}/roboto-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Avenir LT Std 85 Heavy"), local("avenir-lt"), 
+  url("#{$avenir-font-path}/avenir-lt-heavy.ttf") format("truetype"), 
+  url("#{$roboto-font-path}/avenir-lt-heavy.woff") format("woff");
+}
+
+
+

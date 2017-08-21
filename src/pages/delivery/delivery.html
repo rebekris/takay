@@ -1,0 +1,114 @@
+<!-- old version
+<ion-header>
+
+  <ion-navbar>
+
+    <ion-title>Delivery</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<div class="padding">
+
+
+	<div class="divider">
+		<h3>Select your Delivery Day</h3>
+	</div>
+	<ion-list radio-group>
+	  <ion-list-header>
+	    <h1>Select a Day</h1>
+	  </ion-list-header>
+	  <ion-grid>
+		<ion-row >
+			<ion-col col-6 *ngFor ="let d  of days">
+		  	<ion-item>
+		    	<ion-label>{{d.name}}</ion-label>
+		    	<ion-radio [value]=d.name (tap)="getDay($event, d)"></ion-radio>
+		  		</ion-item>
+	  		</ion-col>
+		</ion-row>
+	</ion-grid>
+	 </ion-list>
+
+	 <ion-list radio-group>
+	  <ion-list-header>
+	    <h1>Select a Schedule</h1>
+	  </ion-list-header>
+	  <ion-grid>
+		<ion-row >
+			<ion-col col-12 *ngFor ="let h  of hour">
+		  	<ion-item (tap)="getHour($event, h)">
+		    	<ion-label>{{h.name}}</ion-label>
+		    	<ion-radio [value]=h.name></ion-radio>
+		  		</ion-item>
+	  		</ion-col>
+		</ion-row>
+	</ion-grid>
+	 </ion-list>
+	 <ion-list>
+	 	<button ion-button clear full (click)="doAddress()" id="city" icon-right>Select your Delivery Address  <ion-icon name="arrow-down"></ion-icon></button>
+	 </ion-list>
+	 <button ion-button class="submit-btn" small type="submit" on-click="save()">Save</button> 
+
+
+	
+</div>
+
+</ion-content> -->
+
+
+
+<ion-header>
+
+  <ion-navbar>
+
+    <ion-title>Delivery</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<div class="padding">
+
+
+	<div class="divider">
+		<h3>Select your Delivery Day</h3>
+	</div>
+	
+	<div *ngFor ="let d  of days">
+		<div class="day" (tap)="getDay($event, d.name)">
+			<h4>{{d.name}}</h4>
+			<div class="state_bullet">
+			    <div  class="state uncheck" [id]=d.name></div>
+	            	    	
+	        </div>
+		</div>
+		<ion-list [id]=d.name class="acordeon hidden" radio-group>
+		<ion-item *ngFor ="let h of hour" (tap)="getHour($event, h)">		
+			<ion-label>{{h.name}}</ion-label>
+			<ion-radio [value]=h.name ></ion-radio>			
+		</ion-item> 
+
+			
+		</ion-list>
+
+		
+	</div>
+
+
+
+	 <ion-list>
+	 	<button ion-button clear full (click)="doAddress()" id="address" icon-right>Select your Delivery Address  <ion-icon name="arrow-down"></ion-icon></button>
+	 </ion-list>
+	 <button ion-button class="submit-btn" small type="submit" on-click="save()">Save</button> 
+
+
+	
+</div>
+
+</ion-content>

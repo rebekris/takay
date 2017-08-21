@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page9">
+  <h1 style="text-align: left; font-weight: bolder">{{ user }}</h1>
+  <ion-list >
+    <ion-item color="none" on-click="goToRecommend()">
+      Recommend Friends And Get Discounts
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item color="none" on-click="goToBill()">
+      Delivery Address
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item color="none" on-click="goToCoupon()">
+      My Coupons
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item color="none" on-click="goToFaq()">
+      Help + Support
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>    
+    <ion-item color="none" on-click="goToFeedback()">
+      Give Us Feed Back
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item color="none" on-click="logut()">
+      Log Out
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

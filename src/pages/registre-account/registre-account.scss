@@ -1,0 +1,48 @@
+page-registre-account {
+	.list-ios > .item-block:first-child{border-top:initial !important;}
+	.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block, .list-md .item-input:last-child{border-bottom: initial !important;}
+
+	#country, #city{
+		background: white;
+		text-transform: capitalize;
+		vertical-align: middle;
+		border: 1px solid black;
+	}
+	h2{
+		background: url(../assets/img/bg_profile_title.jpg) no-repeat;
+		background-size: 9%;
+		background-position: 17% center;
+		text-align: center;
+		padding-left: 10%;
+		padding-top: 4px;
+	}
+	.item-input, .input-has-value.item-input-has-value, .input-has-focus.item-input-has-focus, .input-has-value.item-input-has-value.input-ios{
+		ion-input, ion-textarea{
+			border-bottom: 1px solid black;	
+			margin-top: 0;
+		}
+	}
+	.list-ios > .item-block:first-child{border-top:0 !important;}
+
+	.label, .label-ios{
+		margin: 0 9px 5px 0;
+	}
+
+
+	ion-label{
+		color: #373737;
+		font-size: 15px;
+	}
+	.list, .list-ios{
+		margin: 10px 0 32px;
+	}
+
+	.item, .item-ios{
+		margin-top: 10px;
+	}
+
+	.selects{
+		margin-bottom: 0;
+	}
+
+}

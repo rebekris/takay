@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "723680977118",
+    "project_id": "firebase-takay"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723680977118:android:8fe18b80a3c2fc65",
+        "android_client_info": {
+          "package_name": "com.h4ostudio.takay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723680977118-9rt7o3p7ufa75pa195urb9ia9es7ncgm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.h4ostudio.takay",
+            "certificate_hash": "2c1816335c310486ce835e8b7e8e36b2f6cbb9d3"
+          }
+        },
+        {
+          "client_id": "723680977118-9c9uqs3oek6hj0eublh0ivvea73ivus9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_6NEByZLXCJVSP-sylS6LqJA9VDRAeLU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
